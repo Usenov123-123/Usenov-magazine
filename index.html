@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPLY — Интернет-магазин</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">SHOP<span>LY.</span></a>
+
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Найти товар...">
+            <button id="searchButton" aria-label="Поиск">⌕</button>
+        </div>
+
+        <button class="cart-button" id="openCart">
+            🛒 Корзина <span id="cartCount">0</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">НОВАЯ КОЛЛЕКЦИЯ</span>
+                <h1>Покупай то,<br>что вдохновляет.</h1>
+                <p>Стильные товары для жизни, работы и отдыха.</p>
+                <a href="#catalog" class="hero-button">Перейти к покупкам →</a>
+            </div>
+            <div class="hero-decoration">SHOP<br>SMART.</div>
+        </section>
+
+        <section class="catalog" id="catalog">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">НАШ АССОРТИМЕНТ</p>
+                    <h2>Популярные товары</h2>
+                </div>
+                <span id="productCount" class="product-count"></span>
+            </div>
+
+            <nav class="categories" id="categories">
+                <button class="category active" data-category="Все">Все товары</button>
+                <button class="category" data-category="Электроника">Электроника</button>
+                <button class="category" data-category="Одежда">Одежда</button>
+                <button class="category" data-category="Аксессуары">Аксессуары</button>
+                <button class="category" data-category="Дом">Для дома</button>
+            </nav>
+
+            <div class="products" id="products"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#" class="logo">SHOP<span>LY.</span></a>
+        <p>© 2026 SHOPLY. Магазин хороших вещей.</p>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <h2>Корзина</h2>
+            <button id="closeCart" class="close-button" aria-label="Закрыть">✕</button>
+        </div>
+
+        <div id="cartItems" class="cart-items"></div>
+
+        <div class="cart-bottom">
+            <div class="total">
+                <span>Итого:</span>
+                <strong id="cartTotal">0 сом</strong>
+            </div>
+            <button id="checkoutButton" class="checkout-button">Оформить заказ →</button>
+            <p class="cart-note">Демонстрационный магазин. Оплата не подключена.</p>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
